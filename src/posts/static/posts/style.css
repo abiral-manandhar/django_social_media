@@ -1,0 +1,376 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: linear-gradient(to right top, #acbdba, #203337);
+    font-family: 'Poppins', sans-serif;
+ }
+
+.interactions{
+    display: flex;
+    position: fixed;
+
+    margin-top: -34;
+    margin-left: 100;
+
+
+}
+
+.main-section{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 50px;
+    z-index: 20;
+
+
+}
+.glass{
+    margin-top: 40px;
+    background: white;
+        background: linear-gradient(to left top, rgba(255, 255, 255, .5), rgba(255, 255, 255, .8));
+    min-height: 80vh;
+    width: 43%;
+
+    border-radius: 1.5rem;
+    z-index: 2;
+    backdrop-filter: blur(2rem);
+    position: relatve;
+    overflow: hidden;
+
+}
+
+.circle1, .circle2{
+    background: white;
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, .8), rgba(255, 255, 255, .2));
+    height: 10rem;
+    width: 10rem;
+    position: absolute;
+    border-radius: 50%;
+
+}
+.image-carousel{
+    padding-top: 10px;
+    height: 550px;
+    object-fit: contain;
+    position: relative;
+    bottom: 20px;
+    margin-top:25px;
+}
+.im{    width: 100%;
+        height: 100%;
+        border-radius: 10px;
+ }
+.description{
+margin-top: 10px;
+    display: flex;
+    padding-left: 20px;
+    align-items: center;
+}
+.description > p{
+           font-size: 15px;
+           word-break: break-word;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+        overflow: hidden;
+    padding-right: 15px;
+}
+
+.desc-container{
+    border-top-color: aliceblue;
+    border-top-style: solid;
+    border-top-width: 6px;
+    position: relative;
+    top: -6px;
+}
+.s-btn{
+    fill: red;
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+
+}
+
+.like{
+fill: black;
+}
+.liked{
+    fill: #6ba4ff;
+}
+
+.like-btn:hover{
+    text-decoration: none;
+    opacity: .4;
+}
+
+.like-btn{
+    padding-left: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.comm-cont{
+    padding-left: 30px;
+
+    display: flex;
+    justify-content: center;
+
+
+
+}
+.counter{
+    display: flex;
+    height: 30px;
+    padding-left: 20px;
+    justify-content:center;
+    align-items: center;
+    margin: 0;
+    margin-left: 20px;
+    width: 50px;
+}
+
+.like-btn:visited{
+    color: #6ba4ff;
+}
+.like-btn:active { color: #6ba4ff; }
+
+
+.comm-cont:hover{
+    opacity: .4;
+    cursor: pointer;
+}
+
+.comm-cont > img{
+      width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+.form-field{
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    height: 40px;
+    flex: 1;
+    padding-right: 33px;
+    padding-left: 10px;
+}
+form{
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    }
+    .sub-btn{
+        width: 20px;
+        height: 20px;
+    }
+    .cont-sub-btn{
+        background: white;
+        height: 40px;
+        display: flex;
+        padding-right: 5px;
+        align-items: center;
+        border-top-right-radius: 6px;
+        border-bottom-right-radius: 6px;
+        position: absolute;
+        right: 20px;
+    }
+
+.user-info > img{
+
+    position: relative;
+
+    width:  60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0;
+    padding: 0;
+}
+.user-info{
+    display: flex;
+    padding-left: 3px;
+    padding-top: 3px;
+    height: 68px;
+    width: 100%;
+    border-bottom-style: solid;
+    border-bottom-color: gray;
+    border-bottom-width: 1px
+}
+
+
+
+
+
+.comment{
+    background: white;
+    margin: 10px;
+    border-radius: 10px;
+    height: fit-content;
+
+
+}
+.trans{
+    background: none;
+
+}
+
+.comment > p {
+    width: 100%;
+    padding: 10;
+    height: fit-content;
+    font-size: 15px;
+    word-break: break-word;
+}
+
+.sub-info > p{
+    margin: 0;
+}
+.date{
+       padding-left: 4px;
+    color: #cacaca;
+    font-family: 'Open Sans', sans-serif;
+   font-size: 13px;
+}
+.username{
+    top: 0px;
+    padding-left: 3px;
+    color: black;
+}
+.not-visible{
+    display: none;
+}
+
+
+.profile-pic{
+    border: 1px solid transparent;
+    border-radius: 50%;
+    background: linear-gradient(#a5e280, #58e425);
+    background-clip: padding-box;
+    padding: 6px;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    position: absolute;
+    left: 20;
+    top: 10;
+
+}
+
+.navbar{
+    padding-top: 20px;
+    z-index: 5;
+
+}
+
+.navbar > ul > li{
+
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.navbar > ul{
+    position: absolute;
+    text-decoration: none;
+    list-style: none;
+    padding: 0 !important;
+    margin: 0 !important;
+    z-index: 2;
+}
+
+.profile_name{
+    min-width: 80px;
+    max-width: 100px;
+    height: 90px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 1450;
+    top: 0;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.comment-count{
+        margin-top: 4px;
+        display: flex;
+        height: 30px;
+        justify-content:center;
+    align-items: center;
+    margin-left: 20px;
+    width: 50px;
+    padding-left: 20px;
+
+}
+.comm-cont{
+    margin-top: 7px;
+    margin-left: -20px;
+}
+.load{
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 12px;
+
+
+}
+.comment
+.loaded{
+        margin-left: 35%;
+        margin-bottom: 12px;
+}
+.carousel-control-next,
+.carousel-control-prev /*, .carousel-indicators */ {
+    filter: invert(100%);
+    width: 30px;
+    background:#6f5b5b9e
+
+}
+
+.profile_name{
+    display: flex;
+}
+.navbar > ul{
+    top: 10;
+    display: flex;
+
+}
+
+.navbar > ul > li{
+    display: flex;
+        height: 80px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 50px;
+}
+.btn-comt-sub{
+    backgroud: red;
+
+}
+.bsub{
+    width: 24px;
+    margin-left: 20px;
+}
+
+.user-info > img{
+    width: 55px;
+    height: 55px;
+}
+

@@ -1,0 +1,78 @@
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
+    <link rel = 'stylesheet' href = ' {% static "users/detail.css" %} '>
+
+
+</head>
+<body>
+
+<div class="main-container">
+
+    <div class="glass">
+<div id="{{p.pk}}" class="carousel slide" data-ride="carousel">
+{%for i in p.image_set.all%}
+    {% if forloop.counter0 == 0%}
+    <div class="carousel-inner m-inner im ">
+        <div class="carousel-item active">
+            <img class="d-block w-100 image-carousel " src="{{i.image.url}}" alt="First slide">
+        </div>
+        {%else%}
+
+        <div class="carousel-item im">
+            <img class="d-block w-100 image-carousel" src="{{i.image.url}}" alt="Second slide">
+        </div>
+        {% endif %}
+  {% endfor %}
+
+    <a class="carousel-control-prev" href="#{{p.pk}}" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#{{p.pk}}" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+    </div>
+
+</div>
+</div>
+    <div class="right">
+        <div class="user-info">
+            <img src="{{p.user.profile.profile_pic.url}}">
+            <p class="username">
+                {{p.user.username}}
+            </p>
+        </div>
+<div class="desc-container">
+
+    <div class="description">
+
+        <p class="ellipse-two-lines">{{p.description}}</p>
+    <br>
+
+    </div>
+    </div>
+
+</div>
+
+</div>
+
+
+</body>
+</html>
